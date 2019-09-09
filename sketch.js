@@ -1,6 +1,7 @@
 function setup() {
-    w = parseFloat(document.getElementById("game").style.width) * 0.01 * windowWidth;
-    h = parseFloat(document.getElementById("game").style.height) * 0.01 * windowWidth;
+    e = window.getComputedStyle(document.getElementById("game"));
+    w = parseInt(e.getPropertyValue("width"), 10);
+    h = parseInt(e.getPropertyValue("height"), 10);
     console.log(w + "$" + h);
     var canvas = createCanvas(w, h);
     canvas.parent("game");
