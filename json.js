@@ -1,6 +1,15 @@
 function save() {
-    var a = document.getElementById("t1").value;
-    //var b = document.getElementById("f1").element[0].value;
-    document.write("hello " + a);
-    //try life with it
+    var form1 = document.forms["airplane"];
+    var obj = {};
+    for (f of form1.elements) {
+        if (f.type == "number") {
+            obj[f.id] = parseInt(f.value);
+        } else if (f.type == "text") {
+            obj[f.id] = f.value;
+        }
+    }
+    str = JSON.stringify(obj);
+    localStorage.setItem("obj", str);
+    //
+    console.log(obj);
 }
