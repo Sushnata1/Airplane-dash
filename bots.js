@@ -6,15 +6,14 @@ class Bot {
         this.r = random(20, 255);
         this.g = random(0, 255);
         this.b = random(0, 255);
-        this.po = 0;
     }
 
     change = function() {
         this.x = random(w);
         this.y = random(h);
         this.r = random(20, 255);
-        this.g = random(0, 255);
-        this.b = random(0, 255);
+        this.g = random(20, 255);
+        this.b = random(20, 255);
     }
 
     show = function() {
@@ -28,8 +27,9 @@ class Bot {
     collide = function() {
         if ((this.x > mouseX - 20 && this.x < mouseX + 20) || (this.y > mouseY - 20 && this.y < mouseY + 20)) {
             var p = document.getElementById("points");
-            this.po++;
-            p.innerHTML = this.po;
+            po++;
+            p.innerHTML = po;
+            this.change();
         }
     }
 }

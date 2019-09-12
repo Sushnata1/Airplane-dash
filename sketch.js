@@ -1,7 +1,8 @@
-var s, w, h;
+var s, w, h,po;
 var bots;
 
 function setup() {
+  po=0;
     e = window.getComputedStyle(document.getElementById("game"));
     w = parseInt(e.getPropertyValue("width"), 10);
     h = parseInt(e.getPropertyValue("height"), 10);
@@ -14,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-    if (frameCount % 40 == 0)
+    if (frameCount % s["delay"] == 0)
         bots.change();
     n = s["size"];
     clear();
