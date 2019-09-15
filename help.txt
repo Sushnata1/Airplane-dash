@@ -1,2 +1,0 @@
-https://lengstorf.com/get-form-values-as-json/
-https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript

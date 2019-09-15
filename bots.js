@@ -27,7 +27,7 @@ class Bot {
         if ((mouseX >= this.x && mouseX <= this.x + this.n) && (mouseY >= this.y && mouseY <= this.y + this.n)) {
             var p = document.getElementById("points");
             po++;
-            p.innerHTML = po;
+            p.innerHTML = "Score : " + po;
             this.change();
         }
     }
@@ -53,13 +53,12 @@ class Bomb {
     }
 
     collide = function() {
-        console.log(get(mouseX, mouseY));
-        console.log(color(255));
         if ((mouseX >= this.x && mouseX <= this.x + this.n) && (mouseY >= this.y && mouseY <= this.y + this.n)) {
             noLoop();
             var p = document.getElementById("points");
-            po++;
-            p.innerHTML = "Game Over<br>";
+            p.innerHTML = "Game Over | Score : " + po;
+            localStorage.setItem("po", po);
+            window.open("gameover.html", "_self");
         }
     }
 }
