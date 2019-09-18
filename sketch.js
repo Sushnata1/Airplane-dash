@@ -1,4 +1,5 @@
 var s, w, h, po;
+var d;
 var bots;
 var nm;
 
@@ -18,7 +19,6 @@ function setup() {
     bots[0] = new Bomb();
     for (let i = 1; i < nm; i++) {
         bots[i] = new Bot();
-        console.log(bots[i]);
     }
 }
 
@@ -26,6 +26,8 @@ function draw() {
     if (frameCount % s["delay"] == 0) {
         for (let i = 0; i < nm; i++)
             bots[i].change();
+        if (d > 80)
+            d -= 2;
     }
     n = s["size"];
     clear();
