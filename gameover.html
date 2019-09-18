@@ -1,26 +1,29 @@
 <html>
+<link rel="stylesheet" href="npage.css" type="text/css" />
+<div>
 
-<head>Game over</head>
-<script>
-    function show() {
-        var pa = document.getElementById("score");
-        po = localStorage.getItem("po");
-        //document.write("<h1>Score : " + po + "<h1>");
-        pa.innerHTML = "Score : " + po;
-    }
-</script>
+    <title>Game over</title>
+    <script>
+        function show() {
+            var pa = document.getElementById("score");
+            po = localStorage.getItem("po");
+            //document.write("<h1>Score : " + po + "<h1>");
+            pa.innerHTML = "Score : " + po;
+        }
+    </script>
 
-<!-- -->
-
-<body onload="show()">
-
-    <h1>Game over</h1>
-    <h2 id="score">Score</h2>
     <!-- -->
-    <ul>
-        <li><a href="game.html">Play again</a></li>
-        <li><a href="index.html">Home</a></li>
-    </ul>
-</body>
+
+    <body onload="show()">
+
+        <h1>Game over</h1>
+        <h2 id="score">Score</h2>
+        <!-- -->
+        <ul>
+            <li><a href="game.html">Play again</a></li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </body>
+</div>
 
 </html>

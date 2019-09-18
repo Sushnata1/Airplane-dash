@@ -10,7 +10,7 @@ function setup() {
     h = parseInt(e.getPropertyValue("height"), 10);
     s = JSON.parse(localStorage.getItem("obj"));
     nm = s["number"];
-    console.log(nm);
+    //console.log(nm);
     var canvas = createCanvas(w, h);
     canvas.parent("game");
     background(0);

@@ -1,25 +1,28 @@
 <html>
+<link rel="stylesheet" href="npage.css" type="text/css" />
 
-<head>Square tap</head>
+<title>Square tap</title>
 
 <body>
-    <h1>Square Tap</h1>
-    <h2>Welcome</h2>
-    <ul>
-        <li><a href="game.html">Let's Play</a></li>
-        <li><a href="settings.html">Settings</a></li>
-        <li><a href="help.html">Help</a></li>
-    </ul>
-    <script>
-        //--
-        var obj = {
-            size: 70,
-            delay: 80,
-            number: 5
-        };
-        var str = JSON.stringify(obj);
-        localStorage.setItem("obj", str);
-    </script>
+    <div>
+        <h1>Square Tap</h1>
+        <h2>Welcome</h2>
+        <ul>
+            <li><a href="game.html">Let's Play</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+        <script>
+            //--
+            var obj = {
+                size: 70,
+                delay: 80,
+                number: 5
+            };
+            var str = JSON.stringify(obj);
+            localStorage.setItem("obj", str);
+        </script>
+    </div>
 </body>
 
 </html>
