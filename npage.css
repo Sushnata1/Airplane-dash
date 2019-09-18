@@ -7,9 +7,9 @@ div {
     margin-right: auto;
     width: 60%;
     align-self: center;
-    padding: auto 0;
+    padding: 14% 0;
     display: block;
-    background-color: beige;
+    background-color: black;
 }
 
 h1 {
@@ -44,6 +44,7 @@ ul {
     font-size: 40px;
     margin: 0;
     display: block;
+    background-color: rgb(24, 22, 22)
 }
 
 li a {
