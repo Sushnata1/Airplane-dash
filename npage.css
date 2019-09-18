@@ -6,6 +6,7 @@ div {
     margin-left: auto;
     margin-right: auto;
     width: 60%;
+    align-self: center;
     padding: auto 0;
     display: block;
     background-color: beige;
