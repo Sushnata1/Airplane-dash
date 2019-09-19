@@ -10,14 +10,18 @@ function setup() {
     h = parseInt(e.getPropertyValue("height"), 10);
     s = JSON.parse(localStorage.getItem("obj"));
     nm = s["number"];
-    //console.log(nm);
+    //--
+    nm1 = Math.floor(nm / 4) + 1;
+    nm += nm1;
     var canvas = createCanvas(w, h);
     canvas.parent("game");
     background(0);
     noStroke();
     bots = [];
-    bots[0] = new Bomb();
-    for (let i = 1; i < nm; i++) {
+    for (let i = 0; i < nm1; i++) {
+        bots[i] = new Bomb();
+    }
+    for (let i = nm1; i < nm; i++) {
         bots[i] = new Bot();
     }
 }
@@ -37,13 +41,10 @@ function draw() {
     noFill();
     strokeWeight(14);
     stroke(255);
-    //fill(random(20, 255), random(20, 255), random(20, 255));
     rect(mouseX, mouseY, n / 2, n / 2);
     pop();
-    for (let i = 0; i < nm; i++) {
-        //bots[i].show();
-        //--
-        bots[i].collide();
-        bots[i].show();
+    for (b of bots) {
+        b.collide();
+        b.show();
     }
 }
