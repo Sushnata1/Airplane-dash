@@ -33,6 +33,8 @@ h2 {
     display: block;
     color: white;
     background-image: linear-gradient(to bottom, white 0%, rgb(114, 14, 172) 20px,  rgb(114, 14, 172));
+    background-image: -webkit-linear-gradient(to bottom, white 0%, rgb(114, 14, 172) 20px,  rgb(114, 14, 172));
+}
 }
 
 h2:hover {
