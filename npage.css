@@ -17,11 +17,12 @@ h1 {
     font-size: 64px;
     color: white;
     display: block;
-    background-color: rgb(207, 28, 43);
+    background-image: linear-gradient(to bottom,white 0%, rgb(207, 28, 43) 20px,rgb(207, 28, 43) 100%);
     margin: 0;
 }
 
 h1:hover {
+    background-image: none;
     background-color: red;
 }
 
@@ -31,10 +32,11 @@ h2 {
     margin: 0;
     display: block;
     color: white;
-    background-color: rgb(114, 14, 172);
+    background-image: linear-gradient(to bottom, white 0%, rgb(114, 14, 172) 20px,  rgb(114, 14, 172));
 }
 
 h2:hover {
+    background-image: none;
     background-color: blueviolet
 }
 
@@ -51,10 +53,11 @@ li a {
     display: block;
     color: white;
     text-decoration: none;
-    background-color: yellowgreen;
+    background-image: linear-gradient(to bottom,white 0%,yellowgreen 10px, yellowgreen 100%);
 }
 
 li a:hover {
+    background-image: none;
     background-color: yellow;
     color: green;
 }
