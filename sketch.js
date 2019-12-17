@@ -39,7 +39,7 @@ function draw() {
     push();
     rectMode(CENTER);
     noFill();
-    strokeWeight(4);
+    strokeWeight(n/5);
     stroke(255);
     rect(mouseX, mouseY, n / 2, n / 2);
     pop();
