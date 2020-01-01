@@ -4,11 +4,11 @@
                 justify-content:space-evenly;
                 text-align: justify;
                 flex-flow: wrap;
-                z-index: 2;
             }
             .snowfall span
             {
                 display: inline-block;
+                visibility: hidden;
                 height: 8vw;
                 width: 8vw;
                 border-radius: 50%;
@@ -62,7 +62,8 @@
             {
                 0%{
                     opacity: 1;
-                    -webkit-transform: translate(0,0px) ;
+                    visibility: visible;
+                    -webkit-transform: translate(0,0px);
                 }
                 100%{
                     opacity: 0;
