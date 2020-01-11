@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="npage.css" type="text/css" />
 
 <title>Square tap</title>
+<script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
 
 <body>
 
@@ -14,15 +15,35 @@
         <span></span> <span></span> <span></span> <span></span>
         <span></span> <span></span> <span></span> <span></span>
     </div>
+    <script>
+    FBInstant.startGameAsync()
+  .then(function() {
+  // Retrieving context and player information can only be done
+  // once startGameAsync() resolves
+  var contextId = FBInstant.context.getID();
+  var contextType = FBInstant.context.getType();
+
+  var playerName = FBInstant.player.getName();
+  var pa = document.getElementById("pname");
+  pa.innerHTML = "player : "+playerName;
+  var playerPic = FBInstant.player.getPhoto();
+  var playerId = FBInstant.player.getID();
+
+  // Once startGameAsync() resolves it also means the loading view has 
+  // been removed and the user can see the game viewport
+
+  });
+</script>
 
     <div class="menu">
 
         <h1>Square Tap</h1>
         <h2>Welcome to Christmas Update</h2>
         <ul>
+            <li><h2 id="pname">player</h2></li>
             <li><a href="game.html">Let's Play</a></li>
             <li><a href="settings.html">Settings</a></li>
-            <li><a href="help.html">Help</a></li>
+            <li><a href="help.html">Help</a></li>           
         </ul>
         <script>
             //--
