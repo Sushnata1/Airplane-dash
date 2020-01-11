@@ -17,13 +17,8 @@
     </div>
     <script>
         FBInstant.initializeAsync().then(function(){
-    //FBInstant.setLoadingProgress(100);
-  // Start loading game assets here
-  }
-);
-        //FBInstant.setLoadingProgress(100);
-    FBInstant.startGameAsync()
-  .then(function() {
+    FBInstant.setLoadingProgress(100);
+    FBInstant.startGameAsync().then(function() {
   // Retrieving context and player information can only be done
   // once startGameAsync() resolves
   var contextId = FBInstant.context.getID();
@@ -39,6 +34,10 @@
   // been removed and the user can see the game viewport
 
   });
+  }
+);
+        //FBInstant.setLoadingProgress(100);
+   
 </script>
 
     <div class="menu">
