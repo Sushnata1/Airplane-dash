@@ -4,6 +4,9 @@ h1{
 h2{
     background-image: linear-gradient(to bottom,white 0%,var(--h2color) 10px, var(--h2color) 100%);
 }
+h3{
+    background-image: linear-gradient(to bottom,white 0%,var(--h3color) 10px, var(--h3color) 100%);
+}
 li a{
     background-image: linear-gradient(to bottom,white 0%,var(--liacolor) 10px, var(--liacolor) 100%);
 }
