@@ -1,3 +1,9 @@
+:root {
+--h1color :rgb(207, 28, 43);
+--h2color :rgb(114, 14, 172);
+--liacolor:yellowgreen;
+}
+
 body {
     background-color: black;
 }
@@ -5,7 +11,7 @@ body {
 div.menu {
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 70%;
     align-self: center;
     padding: 14% 0;
     display: block;
@@ -18,8 +24,9 @@ h1 {
     font-size: 64px;
     color: white;
     display: block;
-    background-image: linear-gradient(to bottom,white 0%, rgb(207, 28, 43) 20px,rgb(207, 28, 43) 100%);
     margin: 0;
+    overflow: auto;
+    background-color: var(--h1color);
 }
 
 h1:hover {
@@ -33,10 +40,10 @@ h2 {
     margin: 0;
     display: block;
     color: white;
-    background-image: -webkit-linear-gradient(to bottom, white 0%, rgb(114, 14, 172) 20px,  rgb(114, 14, 172));
-    background-image: linear-gradient(to bottom, white 0%, rgb(114, 14, 172) 20px,  rgb(114, 14, 172));
+    overflow: auto;
+    background-color: var(--h2color);
 }
-}
+
 
 h2:hover {
     background-image: none;
@@ -49,6 +56,7 @@ ul {
     font-size: 40px;
     margin: 0;
     display: block;
+    overflow: auto;
     background-color: green;
 }
 
@@ -56,7 +64,7 @@ li a {
     display: block;
     color: white;
     text-decoration: none;
-    background-image: linear-gradient(to bottom,white 0%,yellowgreen 10px, yellowgreen 100%);
+    background-color: var(--liacolor);
 }
 
 li a:hover {
