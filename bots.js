@@ -19,8 +19,8 @@ class Bot {
 
     show = function() {
         push();
-        tint(this.r, this.g, this.b);//fill(this.r,this.b,this.g);
-        image(this.img,this.x, this.y, this.n, this.n);//rect(this.x,this.y,this.n,this.n);
+        tint(this.r, this.g, this.b);// fill(this.r,this.b,this.g);
+        image(this.img,this.x, this.y, this.n, this.n);// rect(this.x,this.y,this.n,this.n);
         pop();
     }
 
