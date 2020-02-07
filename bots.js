@@ -79,7 +79,7 @@ class Bomb {
             soscillator.connect(scontext.destination);
             var now = scontext.currentTime;
             soscillator.start(0);
-            soscillator.stop(now + 0.5);
+            soscillator.stop(now + 1);
             /**/
             localStorage.setItem("po", po);
             window.open("gameover.html", "_self");
