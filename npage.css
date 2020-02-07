@@ -80,6 +80,7 @@ li a {
     display: block;
     color: white;
     text-decoration: none;
+    border: 5px solid green; 
     background-color: var(--liacolor);
 }
 
