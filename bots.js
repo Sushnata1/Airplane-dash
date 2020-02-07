@@ -1,5 +1,6 @@
 class Bot {
     constructor() {
+        this.scontext = new (window.AudioContext || window.webkitAudioContext)();
         this.n = s["size"];
         this.x = random(this.n, w - this.n);
         this.y = random(this.n, h - this.n);
@@ -30,6 +31,14 @@ class Bot {
             po++;
             p.innerHTML = "Score : " + po;
             this.change();
+            var soscillator;
+            soscillator = scontext.createOscillator();
+            soscillator.type = 'sine';
+            soscillator.frequency.value = 523;
+            soscillator.connect(scontext.destination);
+            var now = scontext.currentTime;
+            soscillator.start(0);
+            soscillator.stop(now + 0.5);
         }
     }
 }
@@ -39,6 +48,7 @@ class Bomb {
         this.n = s["size"];
         this.x = random(this.n, w - this.n);
         this.y = random(this.n, h - this.n);
+        this.scontext = new (window.AudioContext || window.webkitAudioContext)();
     }
 
     change = function() {
@@ -58,6 +68,16 @@ class Bomb {
             noLoop();
             var p = document.getElementById("points");
             p.innerHTML = "Game Over | Score : " + po;
+            /* not working
+            var soscillator;
+            soscillator = scontext.createOscillator();
+            soscillator.type = 'sine';
+            soscillator.frequency.value = 523;
+            soscillator.connect(scontext.destination);
+            var now = scontext.currentTime;
+            soscillator.start(0);
+            soscillator.stop(now + 0.5);
+            */
             localStorage.setItem("po", po);
             window.open("gameover.html", "_self");
         }
