@@ -68,7 +68,7 @@ class Bomb {
             noLoop();
             var p = document.getElementById("points");
             p.innerHTML = "Game Over | Score : " + po;
-            /* not working
+            /* not working :<
             var soscillator;
             soscillator = scontext.createOscillator();
             soscillator.type = 'sine';
