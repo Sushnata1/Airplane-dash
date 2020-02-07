@@ -6,7 +6,7 @@ class Bot {
         this.r = random(20, 255);
         this.g = random(0, 255);
         this.b = random(0, 255);
-        this.img = loadImage("assets/allgorythm.jpeg");
+        this.img = loadImage("assets/allgorythm.jpeg");//image
     }
 
     change = function() {
@@ -19,8 +19,8 @@ class Bot {
 
     show = function() {
         push();
-        tint(this.r, this.g, this.b);//fill(this.r,this.b,this.g);
-        image(this.img,this.x, this.y, this.n, this.n);//rect(this.x,this.y,this.n,this.n);
+        tint(this.r, this.g, this.b);// fill(this.r,this.b,this.g);
+        image(this.img,this.x, this.y, this.n, this.n);// rect(this.x,this.y,this.n,this.n);
         pop();
     }
 
