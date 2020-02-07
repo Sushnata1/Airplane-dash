@@ -2,6 +2,7 @@ var s, w, h, po;
 var d;
 var bots;
 var nm;
+//todo : add sound
 
 function setup() {
     po = 0;
