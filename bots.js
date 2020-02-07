@@ -34,14 +34,15 @@ class Bot {
             var soscillator;
             soscillator = this.scontext.createOscillator();
             console.log("oscillator");
-            console.log(soscillator);
+            //console.log(soscillator);
             soscillator.type = 'sine';
             soscillator.frequency.value = 523;
             soscillator.connect(scontext.destination);
             var now = scontext.currentTime;
             soscillator.start(0);
-            console.log("sound");
+            //console.log("sound");
             soscillator.stop(now + 0.5);
+            //delete soscillator;
         }
     }
 }
@@ -80,6 +81,7 @@ class Bomb {
             var now = scontext.currentTime;
             soscillator.start(0);
             soscillator.stop(now + 1);
+            //delete soscillator;
             /*--*/
             localStorage.setItem("po", po);
             window.open("gameover.html", "_self");
