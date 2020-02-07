@@ -6,7 +6,7 @@ class Bot {
         this.r = random(20, 255);
         this.g = random(0, 255);
         this.b = random(0, 255);
-        this.img = loadImage("assets/allgorythm.jpeg");//image
+        this.img = loadImage("assets/allgorythm.png");//image
     }
 
     change = function() {
