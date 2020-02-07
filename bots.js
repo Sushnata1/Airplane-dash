@@ -1,6 +1,5 @@
 class Bot {
     constructor() {
-        this.scontext = new (window.AudioContext || window.webkitAudioContext)();
         this.n = s["size"];
         this.x = random(this.n, w - this.n);
         this.y = random(this.n, h - this.n);
@@ -31,6 +30,7 @@ class Bot {
             po++;
             p.innerHTML = "Score : " + po;
             this.change();
+            /*
             var soscillator;
             soscillator = this.scontext.createOscillator();
             console.log("oscillator");
@@ -42,7 +42,7 @@ class Bot {
             soscillator.start(0);
             //console.log("sound");
             soscillator.stop(now + 0.5);
-            //delete soscillator;
+            //delete soscillator; */
         }
     }
 }
@@ -52,7 +52,6 @@ class Bomb {
         this.n = s["size"];
         this.x = random(this.n, w - this.n);
         this.y = random(this.n, h - this.n);
-        this.scontext = new (window.AudioContext || window.webkitAudioContext)();
     }
 
     change = function() {
@@ -72,7 +71,8 @@ class Bomb {
             noLoop();
             var p = document.getElementById("points");
             p.innerHTML = "Game Over | Score : " + po;
-            /* not working :<*/
+            /*
+            // not working :<
             var soscillator;
             soscillator = scontext.createOscillator();
             soscillator.type = 'sine';

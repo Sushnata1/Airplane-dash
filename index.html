@@ -53,14 +53,7 @@
             <li><a href="help.html">Help</a></li>           
         </ul>
         <script>
-            var scontext = new (window.AudioContext || window.webkitAudioContext)();
-            var soscillator = scontext.createOscillator();
-            soscillator.type = 'sine';
-            soscillator.frequency.value = 523;
-            soscillator.connect(scontext.destination);
-            var now = scontext.currentTime;
-            soscillator.start(0);
-            soscillator.stop(now + 1);
+            //--
             var obj = {
                 size: 40,
                 delay: 40,

@@ -2,7 +2,6 @@ var s, w, h, po;
 var d;
 var bots;
 var nm;
-var scontext = new (window.AudioContext || window.webkitAudioContext)();
 //todo : add sound
 
 function setup() {
