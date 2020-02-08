@@ -40,7 +40,7 @@ class Bot {
             soscillator.connect(this.scontext.destination);
             var now = this.scontext.currentTime;
             soscillator.start(0);
-            //console.log("sound");
+            //console.log("sound");--
             soscillator.stop(now + 0.5);
         }
     }
