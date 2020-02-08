@@ -2,7 +2,6 @@ var s, w, h, po;
 var d;
 var bots;
 var nm;
-//todo : add sound
 
 function setup() {
     po = 0;
@@ -10,8 +9,8 @@ function setup() {
     w = parseInt(e.getPropertyValue("width"), 10);
     h = parseInt(e.getPropertyValue("height"), 10);
     s = JSON.parse(localStorage.getItem("obj"));
+    var scontext = new (window.AudioContext || window.webkitAudioContext)();
     nm = s["number"];
-    //--
     nm1 = Math.floor(nm / 4) + 1;
     nm += nm1;
     var canvas = createCanvas(w, h);
@@ -23,7 +22,7 @@ function setup() {
         bots[i] = new Bomb();
     }
     for (let i = nm1; i < nm; i++) {
-        bots[i] = new Bot();
+        bots[i] = new Bot(scontext);
     }
 }
 

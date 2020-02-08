@@ -1,5 +1,5 @@
 class Bot {
-    constructor() {
+    constructor(_sc) {
         this.n = s["size"];
         this.x = random(this.n, w - this.n);
         this.y = random(this.n, h - this.n);
@@ -7,6 +7,7 @@ class Bot {
         this.g = random(0, 255);
         this.b = random(0, 255);
         this.img = loadImage("assets/allgorhythm.png");//image
+        this.scontext = _sc;
     }
 
     change = function() {
@@ -30,19 +31,17 @@ class Bot {
             po++;
             p.innerHTML = "Score : " + po;
             this.change();
-            /*
             var soscillator;
             soscillator = this.scontext.createOscillator();
             console.log("oscillator");
             //console.log(soscillator);
             soscillator.type = 'sine';
             soscillator.frequency.value = 523;
-            soscillator.connect(scontext.destination);
-            var now = scontext.currentTime;
+            soscillator.connect(this.scontext.destination);
+            var now = this.scontext.currentTime;
             soscillator.start(0);
             //console.log("sound");
             soscillator.stop(now + 0.5);
-            //delete soscillator; */
         }
     }
 }
