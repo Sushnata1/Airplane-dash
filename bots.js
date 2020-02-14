@@ -79,6 +79,7 @@ class Bomb {
             p.innerHTML = "Game Over | Score : " + po;
             /*
             // not working :<
+            --
             var soscillator;
             soscillator = scontext.createOscillator();
             soscillator.type = 'sine';
