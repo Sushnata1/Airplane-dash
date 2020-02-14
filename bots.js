@@ -21,7 +21,10 @@ class Bot {
     show = function() {
         push();
         tint(this.r, this.g, this.b);// fill(this.r,this.b,this.g);
-        image(this.img,this.x, this.y, this.n, this.n);// rect(this.x,this.y,this.n,this.n);
+        image(this.img,this.x, this.y, this.n, this.n);// 
+        stroke(this.r,this.g,this.b);
+        noFill();
+        rect(this.x,this.y,this.n,this.n);
         pop();
     }
 
@@ -51,6 +54,7 @@ class Bomb {
         this.n = s["size"];
         this.x = random(this.n, w - this.n);
         this.y = random(this.n, h - this.n);
+        this.img = loadImage("assets/allgorhythm.png");//image
     }
 
     change = function() {
@@ -60,8 +64,11 @@ class Bomb {
 
     show = function() {
         push();
-        fill(255);
+        stroke(255);
+        strokeWeight(4);
+        noFill();
         rect(this.x, this.y, this.n, this.n);
+        image(this.img,this.x, this.y, this.n, this.n);
         pop();
     }
 
