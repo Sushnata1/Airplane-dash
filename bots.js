@@ -6,7 +6,7 @@ class Bot {
         this.r = random(20, 255);
         this.g = random(0, 255);
         this.b = random(0, 255);
-        this.img = loadImage("assets/allgorhythm.png");//image
+        this.img = loadImage("assets/mask.png");//image
         this.scontext = _sc;
     }
 
@@ -54,7 +54,7 @@ class Bomb {
         this.n = s["size"];
         this.x = random(this.n, w - this.n);
         this.y = random(this.n, h - this.n);
-        this.img = loadImage("assets/allgorhythm.png");//image
+        this.img = loadImage("assets/corona.png");//image
     }
 
     change = function() {
