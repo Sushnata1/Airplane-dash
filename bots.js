@@ -6,7 +6,7 @@ class Bot {
         this.r = random(20, 255);
         this.g = random(0, 255);
         this.b = random(0, 255);
-        this.img = loadImage("assets/mask.png");//image
+        //this.img = loadImage("assets/happy.png");//image
         this.scontext = _sc;
     }
 
@@ -20,10 +20,10 @@ class Bot {
 
     show = function() {
         push();
-        tint(this.r, this.g, this.b);// fill(this.r,this.b,this.g);
-        image(this.img,this.x, this.y, this.n, this.n);// 
+         fill(this.r,this.b,this.g);//tint(this.r, this.g, this.b);
+        //image(this.img,this.x, this.y, this.n, this.n);// 
         stroke(this.r,this.g,this.b);
-        noFill();
+        //noFill();
         rect(this.x,this.y,this.n,this.n);
         pop();
     }
@@ -54,7 +54,7 @@ class Bomb {
         this.n = s["size"];
         this.x = random(this.n, w - this.n);
         this.y = random(this.n, h - this.n);
-        this.img = loadImage("assets/corona.png");//image
+        //this.img = loadImage("assets/bomb.png");//image
     }
 
     change = function() {
@@ -66,9 +66,9 @@ class Bomb {
         push();
         stroke(255);
         strokeWeight(4);
-        noFill();
+        //noFill();
         rect(this.x, this.y, this.n, this.n);
-        image(this.img,this.x, this.y, this.n, this.n);
+        //image(this.img,this.x, this.y, this.n, this.n);
         pop();
     }
 
