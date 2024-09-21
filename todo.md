@@ -6,3 +6,4 @@
 - [ ] Delete node modules folder
 - [ ] Refactor if time permits 
 - [ ] Implement history feature in gameover page
+- [ ] Simplify setting page, delete the page and move the contents to homepage.
