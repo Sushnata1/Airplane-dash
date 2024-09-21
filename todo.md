@@ -5,4 +5,4 @@
 - [ ] Save the name in local storage (use onfocusout event)
 - [ ] Delete node modules folder
 - [ ] Refactor if time permits 
-- [ ] Implement history feature 
+- [ ] Implement history feature in gameover page
