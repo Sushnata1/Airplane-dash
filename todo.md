@@ -4,3 +4,4 @@
 - [ ] Make content editable in player div
 - [ ] Save the name in local storage (use onfocusout event)
 - [ ] Delete node modules folder
+- [ ] Refactor if time permits 
