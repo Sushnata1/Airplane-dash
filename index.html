@@ -7,7 +7,7 @@
 
 <body>
 
-    <!--
+  <!--
     <div class="snowfall">
         <span></span> <span></span> <span></span> <span></span>
         <span></span> <span></span> <span></span> <span></span>
@@ -17,57 +17,61 @@
         <span></span> <span></span> <span></span> <span></span>
     </div>
     --->
-    <script>
-        FBInstant.initializeAsync().then(function(){
-    FBInstant.setLoadingProgress(100);
-    FBInstant.startGameAsync().then(function() {
-  // Retrieving context and player information can only be done
-  // once startGameAsync() resolves
-  var contextId = FBInstant.context.getID();
-  var contextType = FBInstant.context.getType();
+  <script>
+    FBInstant.initializeAsync().then(function() {
+      FBInstant.setLoadingProgress(100);
+      FBInstant.startGameAsync().then(function() {
+        // Retrieving context and player information can only be done
+        // once startGameAsync() resolves
+        var contextId = FBInstant.context.getID();
+        var contextType = FBInstant.context.getType();
 
-  var playerName = FBInstant.player.getName();
-  var pa = document.getElementById("pname");
-  pa.innerHTML = playerName;
-  var playerPic = FBInstant.player.getPhoto();
-  var playerId = FBInstant.player.getID();
+        var playerName = FBInstant.player.getName();
+        var pa = document.getElementById("pname");
+        pa.innerHTML = playerName;
+        var playerPic = FBInstant.player.getPhoto();
+        var playerId = FBInstant.player.getID();
 
-  // Once startGameAsync() resolves it also means the loading view has 
-  // been removed and the user can see the game viewport --
+        // Once startGameAsync() resolves it also means the loading view has 
+        // been removed and the user can see the game viewport --
 
-  });
-  }
-);
-   
-</script>
+      });
+    });
+  </script>
 
-    <div class="menu">
+  <div class="menu">
 
-        <h1>Square Tap</h1>
-        <ul>
-            <li><h3 id="pname">player</h3></li>
-            <li><a href="game.html">Let's Play</a></li>
-            <li><a href="settings.html">Settings</a></li>
-            <li><a href="help.html">Help</a></li>           
-        </ul>
-        <script>
-            var scontext = new (window.AudioContext || window.webkitAudioContext)();
-            var soscillator = scontext.createOscillator();
-            soscillator.type = 'sine';
-            soscillator.frequency.value = 523;
-            soscillator.connect(scontext.destination);
-            var now = scontext.currentTime;
-            soscillator.start(0);
-            soscillator.stop(now + 1);
-            var obj = {
-                size: 40,
-                delay: 40,
-                number: 5
-            };
-            var str = JSON.stringify(obj);
-            localStorage.setItem("obj", str);
-        </script>
-    </div>
+    <h1>Square Tap</h1>
+    <ul>
+      <li>
+        <h3 id="pname">player</h3>
+      </li>
+      <li><a href="game.html">Let's Play</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </div>
+  <div class="menu">
+    <h2>Help</h2>
+    <p>The aim of this game is to hover on the coloured squares(on PCs) Or tap them (on mobile devices). If the white square is tapped, the game is over.</p>
+  </div>
+
+  <script>
+    var scontext = new(window.AudioContext || window.webkitAudioContext)();
+    var soscillator = scontext.createOscillator();
+    soscillator.type = 'sine';
+    soscillator.frequency.value = 523;
+    soscillator.connect(scontext.destination);
+    var now = scontext.currentTime;
+    soscillator.start(0);
+    soscillator.stop(now + 1);
+    var obj = {
+      size: 40,
+      delay: 40,
+      number: 5
+    };
+    var str = JSON.stringify(obj);
+    localStorage.setItem("obj", str);
+  </script>
 
 </body>
 
