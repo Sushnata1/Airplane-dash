@@ -1,107 +1,117 @@
 :root {
---h1color :rgb(207, 28, 43);
---h2color :rgb(114, 14, 172);
---h3color :darkblue;
---liacolor:yellowgreen;
+  --h1color: rgb(207, 28, 43);
+  --h2color: rgb(114, 14, 172);
+  --h3color: darkblue;
+  --liacolor: yellowgreen;
 }
 
 body {
-    background-color: black;
+  background-color: black;
 }
 
 div.menu {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    align-self: center;
-    padding: 5% 0 0;
-    display: block;
-    background-color:rbga(255,0,0,100);
-    z-index: 3;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  align-self: center;
+  padding: 5% 0 0;
+  display: block;
+  background-color: rbga(255, 0, 0, 100);
+  z-index: 3;
 }
 
 h1 {
-    text-align: center;
-    font-size: 64px;
-    color: white;
-    display: block;
-    margin: 0;
-    overflow: auto;
-    background-color: var(--h1color);
+  text-align: center;
+  font-size: 64px;
+  color: white;
+  display: block;
+  margin: 0;
+  overflow: auto;
+  background-color: var(--h1color);
 }
 
 h1:hover {
-    background-image: none;
-    background-color: red;
+  background-image: none;
+  background-color: red;
 }
 
 h2 {
-    text-align: center;
-    font-size: 50px;
-    margin: 0;
-    display: block;
-    color: white;
-    overflow: auto;
-    background-color: var(--h2color);
+  text-align: center;
+  font-size: 50px;
+  margin: 0;
+  display: block;
+  color: white;
+  overflow: auto;
+  background-color: var(--h2color);
 }
 
 h3 {
-    text-align: center;
-    font-size: 45px;
-    margin: 0;
-    display: block;
-    color: white;
-    overflow: auto;
-    background-color: var(--h3color);
+  text-align: center;
+  font-size: 45px;
+  margin: 0;
+  display: block;
+  color: white;
+  overflow: auto;
+  background-color: var(--h3color);
 }
 
-h3:hover{
-    background-image: none;
-    background-color: blue;
-    color: lightblue;
+h3:hover {
+  background-image: none;
+  background-color: blue;
+  color: lightblue;
 }
 
 h2:hover {
-    background-image: none;
-    background-color: blueviolet
+  background-image: none;
+  background-color: blueviolet
 }
 
 ul {
-    text-align: center;
-    list-style-type: none;
-    font-size: 40px;
-    margin: 0;
-    display: block;
-    overflow: auto;
-    background-color: green;
+  text-align: center;
+  list-style-type: none;
+  font-size: 40px;
+  margin: 0;
+  display: block;
+  overflow: auto;
+  background-color: green;
+}
+
+li {
+  color: #fff;
 }
 
 li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    border: 5px solid green; 
-    background-color: var(--liacolor);
+  display: block;
+  color: white;
+  text-decoration: none;
+  border: 5px solid green;
+  background-color: var(--liacolor);
 }
 
 li a:hover {
-    background-image: none;
-    background-color: yellow;
-    color: green;
+  background-image: none;
+  background-color: yellow;
+  color: green;
 }
 
 p {
-    font-size: 28px;
-    background-color: aqua;
-    margin: 0;
-    padding: 10;
+  font-size: 28px;
+  background-color: aqua;
+  margin: 0;
+  padding: 10;
 }
 
 p:hover {
-    color: white;
-    background-color: blue;
+  color: white;
+  background-color: blue;
 }
 
-form {
-    background-color: palevioletred;
+button {
+  background-color: yellow;
+  border: 0;
+  font-size: 28px
+}
+
+button:hover{
+  background-color: yellowgreen;
 }
