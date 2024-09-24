@@ -3,7 +3,6 @@
 <link rel="stylesheet" href="npage.css" type="text/css" />
 
 <title>Square tap</title>
-<script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
 
 <body>
 
@@ -18,25 +17,40 @@
     </div>
     --->
   <script>
-    FBInstant.initializeAsync().then(function() {
-      FBInstant.setLoadingProgress(100);
-      FBInstant.startGameAsync().then(function() {
-        // Retrieving context and player information can only be done
-        // once startGameAsync() resolves
-        var contextId = FBInstant.context.getID();
-        var contextType = FBInstant.context.getType();
+    function save(l) 
+    {
+      var level = {};
+      switch (l) {
+        case "EASY":
+          level = {
+            name: "EASY",
+            size: 100,
+            delay: 100,
+            number: 5
+          };
+          break;
 
-        var playerName = FBInstant.player.getName();
-        var pa = document.getElementById("pname");
-        pa.innerHTML = playerName;
-        var playerPic = FBInstant.player.getPhoto();
-        var playerId = FBInstant.player.getID();
+        case "MEDIUM":
+          level = {
+            name: "MEDIUM",
+            size: 80,
+            delay: 80,
+            number: 10
+          };
+          break;
 
-        // Once startGameAsync() resolves it also means the loading view has 
-        // been removed and the user can see the game viewport --
-
-      });
-    });
+        case "HARD":
+          level = {
+            name: "HARD",
+            size: 50,
+            delay: 50,
+            number: 20
+          };
+      }
+      var str = JSON.stringify(level);
+      localStorage.setItem("level", str);
+      window.open("game.html", "_self");
+    }
   </script>
 
   <div class="menu">
@@ -46,13 +60,18 @@
       <li>
         <h3 id="pname">player</h3>
       </li>
-      <li><a href="game.html">Let's Play</a></li>
-      <li><a href="settings.html">Settings</a></li>
+      <li>
+        Let's Play<br>
+        <button onclick=save("EASY")>EASY</button>
+        <button onclick=save("MEDIUM")>MEDIUM</button>
+        <button onclick=save("HARD")>HARD</button>
+      </li>
     </ul>
   </div>
+
   <div class="menu">
     <h2>Help</h2>
-    <p>The aim of this game is to hover on the coloured squares(on PCs) Or tap them (on mobile devices). If the white square is tapped, the game is over.</p>
+    <p>The aim of this game is to hover on the coloured squares(on PCs) Or tap them (on mobile devices) to get 1 point. If a white square is tapped or hovered, the game is over.</p>
   </div>
 
   <script>
@@ -64,13 +83,6 @@
     var now = scontext.currentTime;
     soscillator.start(0);
     soscillator.stop(now + 1);
-    var obj = {
-      size: 40,
-      delay: 40,
-      number: 5
-    };
-    var str = JSON.stringify(obj);
-    localStorage.setItem("obj", str);
   </script>
 
 </body>

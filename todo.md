@@ -5,6 +5,6 @@
 - [ ] Delete node modules folder
 - [ ] Refactor if time permits 
 - [ ] Implement history feature in gameover page
-- [ ] Simplify setting page, delete the page and move the contents to homepage
+- [x] Simplify setting page, delete the page and move the contents to homepage
 - [ ] Add Sonabonti as collaborator to this repo
 - [ ] Add Durga and Asur clipart image in the game drawn by Sonabonti 

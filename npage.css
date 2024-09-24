@@ -94,6 +94,7 @@ p {
     font-size: 28px;
     background-color: aqua;
     margin: 0;
+    padding: 10;
 }
 
 p:hover {
