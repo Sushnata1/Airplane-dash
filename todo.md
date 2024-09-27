@@ -8,3 +8,4 @@
 - [x] Simplify setting page, delete the page and move the contents to homepage
 - [ ] Add Sonabonti as collaborator to this repo
 - [ ] Add Durga and Asur clipart image in the game drawn by Sonabonti 
+- [ ] Change the pointer
