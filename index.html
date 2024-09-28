@@ -17,8 +17,7 @@
     </div>
     --->
   <script>
-    function save(l) 
-    {
+    function save(l) {
       var level = {};
       switch (l) {
         case "EASY":
@@ -51,17 +50,28 @@
       localStorage.setItem("level", str);
       window.open("game.html", "_self");
     }
+
+    function saveName() {
+      var pname = document.getElementById("pname").textContent;
+      localStorage.setItem("pname", pname);
+    }
+
+    // function getName()
+    // {
+    //   var name = localStorage.getItem("pname");
+    //   var pname = document.getElementById("pname");
+    //   pname.innerHTML = name;
+    // }
   </script>
 
   <div class="menu">
 
     <h1>Square Tap</h1>
+    <h3>Welcome to Durga Puja 2024 update</h3>
+    <h3 id="pname" contenteditable="true" onfocusout=saveName()>player</h3>
     <ul>
+      <li>Let's Play<br></li>
       <li>
-        <h3 id="pname">player</h3>
-      </li>
-      <li>
-        Let's Play<br>
         <button onclick=save("EASY")>EASY</button>
         <button onclick=save("MEDIUM")>MEDIUM</button>
         <button onclick=save("HARD")>HARD</button>
@@ -71,11 +81,12 @@
 
   <div class="menu">
     <h2>Help</h2>
-    <p>The aim of this game is to hover on the coloured squares(on PCs) Or tap them (on mobile devices) to get 1 point. If a white square is tapped or hovered, the game is over.</p>
+    <p>The aim of this game is to hover on the coloured squares(on PCs) Or tap them (on mobile devices) to get 1 point.
+      If a white square is tapped or hovered, the game is over.</p>
   </div>
 
   <script>
-    var scontext = new(window.AudioContext || window.webkitAudioContext)();
+    var scontext = new (window.AudioContext || window.webkitAudioContext)();
     var soscillator = scontext.createOscillator();
     soscillator.type = 'sine';
     soscillator.frequency.value = 523;

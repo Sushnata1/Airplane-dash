@@ -80,18 +80,31 @@ li {
   color: #fff;
 }
 
-li a {
+/* li  {
   display: block;
   color: white;
   text-decoration: none;
   border: 5px solid green;
   background-color: var(--liacolor);
+} */
+
+li:hover {
+  background-image: none;
+  background-color: lawngreen;
+  color: black;
+}
+
+li a {
+  background-image: none;
+  text-decoration: none;
+  color: white;
 }
 
 li a:hover {
   background-image: none;
-  background-color: yellow;
-  color: green;
+  background-color: lawngreen;
+  text-decoration: none;
+  color: black;
 }
 
 p {
@@ -107,11 +120,12 @@ p:hover {
 }
 
 button {
-  background-color: yellow;
+  background-color: lawngreen;
   border: 0;
   font-size: 28px
 }
 
 button:hover{
-  background-color: yellowgreen;
+  color: white;
+  background-color: green;
 }
