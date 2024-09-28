@@ -56,19 +56,19 @@
       localStorage.setItem("pname", pname);
     }
 
-    // function getName()
-    // {
-    //   var name = localStorage.getItem("pname");
-    //   var pname = document.getElementById("pname");
-    //   pname.innerHTML = name;
-    // }
+    function getName()
+    {
+      var name = localStorage.getItem("pname");
+      var pname = document.getElementById("pname");
+      pname.innerHTML = name;
+    }
   </script>
 
   <div class="menu">
 
     <h1>Square Tap</h1>
     <h3>Welcome to Durga Puja 2024 update</h3>
-    <h3 id="pname" contenteditable="true" onfocusout=saveName()>player</h3>
+    <h3 id="pname" contenteditable="true" onfocusout=saveName() onload=getName()>player</h3>
     <ul>
       <li>Let's Play<br></li>
       <li>
