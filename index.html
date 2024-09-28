@@ -17,6 +17,13 @@
     </div>
     --->
   <script>
+
+    document.addEventListener('readystatechange',(event) => {
+      if (event.target.readyState === 'complete'){
+        getName();
+      }
+    })
+
     function save(l) {
       var level = {};
       switch (l) {
