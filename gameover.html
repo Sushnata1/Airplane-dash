@@ -21,7 +21,7 @@
             //document.write("<h1>Score : " + po + "<h1>");
             pa.innerHTML = "Score : " + po;
             var pname2 = document.getElementById("pname2");
-            pname = localStorage.getItem("pname");
+            pname = localStorage.getItem("pname") || player;
             //document.write("<h1>Score : " + po + "<h1>");
                 pname2.innerHTML = pname;
         }
