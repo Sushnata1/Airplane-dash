@@ -52,13 +52,25 @@ h3 {
   display: block;
   color: white;
   overflow: auto;
-  background-color: var(--h3color);
+  background-color: darkred;
 }
 
 h3:hover {
   background-image: none;
-  background-color: blue;
-  color: lightblue;
+  background-color: pink;
+  color: black;
+}
+
+.name {
+  background-image: none;
+  color: white;
+  background-color: darkred;
+}
+
+.name:hover {
+  background-image: none;
+  background-color: pink;
+  color: black;
 }
 
 h2:hover {

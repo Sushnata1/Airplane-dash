@@ -105,9 +105,10 @@ class Bomb {
             score : po,
             level : level,
             time_taken : time_taken+" ms",
-            recorded_at : end_time.toLocaleString(),
+            recorded_at : end_time.toString(),
         };
         history.push(s);
+        history = Array.from(new Set(history));//remove duplicates
         localStorage.setItem("history",JSON.stringify(history));
     }
 }

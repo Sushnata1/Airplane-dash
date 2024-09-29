@@ -11,9 +11,6 @@
     <span></span> <span></span> <span></span> <span></span>
 </div>
 -->
-<div class="menu">
-
-    <title>Game over</title>
     <script>
         function show() {
             var pa = document.getElementById("score");
@@ -33,17 +30,21 @@
     </script>
 
     <body onload="show()">
+        <div class="menu">
+
+            <title>Game over</title>
             <h1>Game over</h1>
-            <h1 id="pname2">player</h2>
-                <h2 id="score">Score</h2>
-                <!-- -->
+            <h3 id="pname2">player</h3>
+                <h2 id="score">Score : Cleared</h2>
                 <ul>
                     <li><a href="game.html">Play again</a></li>
                     <li><a href="index.html">Home</a></li>
                 </ul>
+            </div>
+            <div class="menu">
                 <h2>History</h2>
                 <p id="history"></p>
+            </div>
     </body>
-</div>
 
 </html>
