@@ -53,24 +53,27 @@ h3 {
   color: white;
   overflow: auto;
   background-color: darkred;
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
 }
 
 h3:hover {
-  background-image: none;
-  background-color: pink;
-  color: black;
+  border-style: solid;
+  border-color: white;
 }
 
 .name {
-  background-image: none;
-  color: white;
   background-color: darkred;
+  color:white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
 }
 
 .name:hover {
-  background-image: none;
-  background-color: pink;
-  color: black;
+  border-style: solid;
+  border-color: white;
 }
 
 h2:hover {
@@ -138,7 +141,7 @@ button {
   font-size: 28px
 }
 
-button:hover{
+button:hover {
   color: white;
   background-color: green;
 }
