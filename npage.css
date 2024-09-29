@@ -146,8 +146,13 @@ button:hover {
   background-color: green;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
 th,td {
-  border: none;
+  border: 2px solid black;
   text-align: left;
   padding: 5px;
 }
@@ -156,7 +161,7 @@ th:hover{
   background-color: darkblue;
 }
 
-tr:hover{
+tr:hover {
   background-color: aquamarine;
 }
 
