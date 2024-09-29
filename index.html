@@ -66,7 +66,7 @@
     function getName()
     {
       var name = localStorage.getItem("pname");
-      var pname = document.getElementById("pname");
+      var pname = document.getElementById("pname")  ?? "Player";
       pname.innerHTML = name;
     }
   </script>

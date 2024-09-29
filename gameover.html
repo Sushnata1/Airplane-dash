@@ -12,12 +12,13 @@
 </div>
 -->
     <script>
+
         function show() {
             var pa = document.getElementById("score");
-            var history = JSON.parse(localStorage.getItem("history"));
-            console.log(history);
-            po = history[history.length - 1];
-            po = po["score"];
+            var gamehistory = JSON.parse(localStorage.getItem("history"));
+            console.log(gamehistory);
+            po = gamehistory ? gamehistory[gamehistory.length - 1] : {};
+            po = po["score"] || "Cleared";
             //document.write("<h1>Score : " + po + "<h1>");
             pa.innerHTML = "Score : " + po;
             var pname2 = document.getElementById("pname2");
@@ -25,7 +26,24 @@
             //document.write("<h1>Score : " + po + "<h1>");
             pname2.innerHTML = pname;
             var h = document.getElementById("history");
-            h.innerHTML = history.map(e => JSON.stringify(e));
+            h.innerHTML = history ? jsonToTable(gamehistory) : "Cleared";
+        }
+
+        function jsonToTable(objarr) {
+            var objkeys = objarr ? Object.keys(objarr[0]) : [];            
+            var output = "<table> <tr>";
+            output += objkeys.map(k=>"<th>"+k+"</th>").join(" ");
+            output += "</tr>"
+            output += "<tr>";
+            for(obj of objarr){
+                output += "<tr>"
+                output += Object.values(obj).map(val => "<td>"+val+"</td>").join(" ");
+                output += "</tr>"
+            }
+            output += "</tr>"
+            output += "</table>";
+            console.log(output);
+            return output;
         }
     </script>
 

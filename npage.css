@@ -128,11 +128,11 @@ p {
   margin: 0;
   padding: 10;
   overflow: scroll;
+  opacity: 0.9;
 }
 
 p:hover {
-  color: white;
-  background-color: blue;
+  opacity: 1;
 }
 
 button {
@@ -144,4 +144,24 @@ button {
 button:hover {
   color: white;
   background-color: green;
+}
+
+th,td {
+  border: none;
+  text-align: left;
+  padding: 5px;
+}
+
+th:hover{
+  background-color: darkblue;
+}
+
+tr:hover{
+  background-color: aquamarine;
+}
+
+th{
+  background-color: blue;
+  color : white;
+  font-size: 20px;
 }
