@@ -90,8 +90,24 @@ class Bomb {
             soscillator.stop(now + 1);
             //delete soscillator;
             /*--*/
-            localStorage.setItem("po", po);
+            this.gameover();
             window.open("gameover.html", "_self");
         }
+    }
+
+    gameover = function() {
+        var end_time = new Date(Date.now());
+        var start_time = Date.parse(localStorage.getItem("start_time"));
+        var time_taken = end_time - start_time;
+        var level = JSON.parse(localStorage.getItem("level"))["name"];
+        var history = JSON.parse(localStorage.getItem("history")) ?? [];
+        var s = {
+            score : po,
+            level : level,
+            time_taken : time_taken+" ms",
+            recorded_at : end_time.toLocaleString(),
+        };
+        history.push(s);
+        localStorage.setItem("history",JSON.stringify(history));
     }
 }

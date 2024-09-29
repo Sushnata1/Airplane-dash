@@ -17,28 +17,32 @@
     <script>
         function show() {
             var pa = document.getElementById("score");
-            po = localStorage.getItem("po");
+            var history = JSON.parse(localStorage.getItem("history"));
+            console.log(history);
+            po = history[history.length - 1];
+            po = po["score"];
             //document.write("<h1>Score : " + po + "<h1>");
             pa.innerHTML = "Score : " + po;
             var pname2 = document.getElementById("pname2");
-            pname = localStorage.getItem("pname") || player;
+            pname = localStorage.getItem("pname") || "player";
             //document.write("<h1>Score : " + po + "<h1>");
-                pname2.innerHTML = pname;
+            pname2.innerHTML = pname;
+            var h = document.getElementById("history");
+            h.innerHTML = history.map(e => JSON.stringify(e));
         }
     </script>
 
-    <!-- -->
-
     <body onload="show()">
-
-        <h1>Game over</h1>
-        <h1 id="pname2">player</h2>
-        <h2 id="score">Score</h2>
-        <!-- -->
-        <ul>
-            <li><a href="game.html">Play again</a></li>
-            <li><a href="index.html">Home</a></li>
-        </ul>
+            <h1>Game over</h1>
+            <h1 id="pname2">player</h2>
+                <h2 id="score">Score</h2>
+                <!-- -->
+                <ul>
+                    <li><a href="game.html">Play again</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+                <h2>History</h2>
+                <p id="history"></p>
     </body>
 </div>
 

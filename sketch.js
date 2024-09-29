@@ -3,23 +3,7 @@ var d;
 var bots;
 var nm;
 
-
 let img;
-
-
-function showPointer() {
-  img.loadPixels(); // Load pixel data
-
-  // for (let i = 0; i < img.pixels.length; i += 4) {
-  //   img.pixels[i] = 255 - img.pixels[i];     // Invert Red
-  //   img.pixels[i + 1] = 255 - img.pixels[i + 1]; // Invert Green
-  //   img.pixels[i + 2] = 255 - img.pixels[i + 2]; // Invert Blue
-  //   // Alpha channel remains unchanged
-  // }
-
-  img.updatePixels(); // Update the pixel data
-}
-
 
 function setup() {
   img = loadImage('pointer.jpg');
@@ -43,11 +27,15 @@ function setup() {
   for (let i = nm1; i < nm; i++) {
     bots[i] = new Bot(scontext);
   }
+  start_time = new Date(Date.now());
+  localStorage.setItem("start_time",start_time);
 }
 
 function showPointer() {
+  push();
   size = s["size"];
   image(img, mouseX - size / 2, mouseY - size / 2, size, size);
+  pop();
 }
 
 
