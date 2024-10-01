@@ -8,5 +8,5 @@
 - [x] Show the history in a table
 - [x] Simplify setting page, delete the page and move the contents to homepage
 - [x] Add Sonabonti as collaborator to this repo
-- [ ] Add Durga and Asur clipart image in the game drawn by Sonabonti 
+- [x] Add Durga and Asur clipart image in the game drawn by Sonabonti 
 - [x] Change the pointer
