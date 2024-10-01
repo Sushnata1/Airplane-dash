@@ -18,7 +18,7 @@
             var gamehistory = JSON.parse(localStorage.getItem("history"));
             console.log(gamehistory);
             po = gamehistory ? gamehistory[gamehistory.length - 1] : {};
-            po = po["score"] || "Cleared";
+            po = po["score"]>=0 ? po["score"] : "cleared";
             //document.write("<h1>Score : " + po + "<h1>");
             pa.innerHTML = "Score : " + po;
             var pname2 = document.getElementById("pname2");

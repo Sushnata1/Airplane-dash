@@ -4,9 +4,13 @@ var bots;
 var nm;
 
 let img;
+var botimg;
+var bombimg;
 
 function setup() {
   img = loadImage('pointer.jpg');
+  botimg = loadImage(`assets/Durga_puja_2024/durga.jpeg`);
+  bombimg = loadImage(`assets/Durga_puja_2024/asur.jpeg`);
   po = 0;
   e = window.getComputedStyle(document.getElementById("game"));
   w = parseInt(e.getPropertyValue("width"), 10);
@@ -22,10 +26,10 @@ function setup() {
   noStroke();
   bots = [];
   for (let i = 0; i < nm1; i++) {
-    bots[i] = new Bomb();
+    bots[i] = new Bomb(bombimg);
   }
   for (let i = nm1; i < nm; i++) {
-    bots[i] = new Bot(scontext);
+    bots[i] = new Bot(scontext,botimg);
   }
   start_time = new Date(Date.now());
   localStorage.setItem("start_time",start_time);

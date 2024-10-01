@@ -7,6 +7,6 @@
 - [x] Implement history feature in gameover page by showing level, time_taken, recorded_at and score
 - [x] Show the history in a table
 - [x] Simplify setting page, delete the page and move the contents to homepage
-- [ ] Add Sonabonti as collaborator to this repo
+- [x] Add Sonabonti as collaborator to this repo
 - [ ] Add Durga and Asur clipart image in the game drawn by Sonabonti 
 - [x] Change the pointer

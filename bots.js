@@ -1,12 +1,12 @@
 class Bot {
-    constructor(_sc) {
+    constructor(_sc,img) {
         this.n = s["size"];
         this.x = random(this.n, w - this.n);
         this.y = random(this.n, h - this.n);
         this.r = random(20, 255);
         this.g = random(0, 255);
         this.b = random(0, 255);
-        //this.img = loadImage("assets/happy.png");//image
+        this.img = img;//image
         this.scontext = _sc;
     }
 
@@ -20,10 +20,12 @@ class Bot {
 
     show = function() {
         push();
-         fill(this.r,this.b,this.g);//tint(this.r, this.g, this.b);
-        //image(this.img,this.x, this.y, this.n, this.n);// 
+        tint(this.r, this.g, this.b);//fill(this.r,this.b,this.g);
+        image(this.img,this.x, this.y, this.n, this.n);// 
+        stroke(255);
+        strokeWeight(4);
         stroke(this.r,this.g,this.b);
-        //noFill();
+        noFill();
         rect(this.x,this.y,this.n,this.n);
         pop();
     }
@@ -50,11 +52,11 @@ class Bot {
 }
 
 class Bomb {
-    constructor() {
+    constructor(img) {
         this.n = s["size"];
         this.x = random(this.n, w - this.n);
         this.y = random(this.n, h - this.n);
-        //this.img = loadImage("assets/bomb.png");//image
+        this.img = img//image
     }
 
     change = function() {
@@ -64,11 +66,12 @@ class Bomb {
 
     show = function() {
         push();
+        image(this.img,this.x, this.y, this.n, this.n);// 
         stroke(255);
         strokeWeight(4);
-        //noFill();
-        rect(this.x, this.y, this.n, this.n);
-        //image(this.img,this.x, this.y, this.n, this.n);
+        stroke(this.r,this.g,this.b);
+        noFill();
+        rect(this.x,this.y,this.n,this.n);
         pop();
     }
 

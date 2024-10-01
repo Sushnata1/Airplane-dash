@@ -158,7 +158,7 @@ th,td {
 }
 
 th:hover{
-  background-color: darkblue;
+  background-color: blue;
 }
 
 tr:hover {
@@ -166,7 +166,15 @@ tr:hover {
 }
 
 th{
-  background-color: blue;
+  background-color: darkblue;
   color : white;
   font-size: 20px;
+}
+
+img{
+  border: 10px solid gray;
+}
+
+img:hover{
+  border: 10px solid darkgrey;
 }
