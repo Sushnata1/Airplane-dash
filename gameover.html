@@ -16,6 +16,7 @@
         function show() {
             var pa = document.getElementById("score");
             var gamehistory = JSON.parse(localStorage.getItem("history"));
+            gamehistory = gamehistory && gamehistory.reverse();
             console.log(gamehistory);
             po = gamehistory ? gamehistory[gamehistory.length - 1] : {};
             po = po["score"]>=0 ? po["score"] : "cleared";
@@ -45,6 +46,14 @@
             console.log(output);
             return output;
         }
+
+        function clean() {
+            console.log("Cleaning history . . .");
+            localStorage.removeItem("history");
+            console.log(localStorage);
+            console.log("Done");
+            window.open("index.html", "_self");
+        }
     </script>
 
     <body onload="show()">
@@ -60,7 +69,7 @@
                 </ul>
             </div>
             <div class="menu">
-                <h2>History</h2>
+                <h2>History <button onclick="clean()">CLEAR</button></h2>
                 <p id="history"></p>
             </div>
     </body>

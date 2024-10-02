@@ -141,6 +141,15 @@ button {
   font-size: 28px
 }
 
+.button {
+  background-color: lawngreen;
+}
+
+.button:hover{
+  color: white;
+  background-color: green;
+}
+
 button:hover {
   color: white;
   background-color: green;
