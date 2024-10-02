@@ -19,8 +19,8 @@
     --->
   <script>
 
-    document.addEventListener('readystatechange',(event) => {
-      if (event.target.readyState === 'complete'){
+    document.addEventListener('readystatechange', (event) => {
+      if (event.target.readyState === 'complete') {
         getName();
       }
     })
@@ -64,10 +64,9 @@
       localStorage.setItem("pname", pname);
     }
 
-    function getName()
-    {
+    function getName() {
       var name = localStorage.getItem("pname");
-      var pname = document.getElementById("pname")  ?? "Player";
+      var pname = document.getElementById("pname") ?? "Player";
       pname.innerHTML = name;
     }
   </script>
@@ -90,21 +89,23 @@
 
   <div class="menu">
     <h2>Help</h2>
-    <p>The aim of this game is to hover on the coloured squares(on PCs) Or tap them (on mobile devices) to get 1 point. If a white square is tapped or hovered, the game is over. Press on <span class = "name">dark red box</span> to change your name. If the history size becomes too large, clear the cache and try again.</p>
+    <p>The aim of this game is to hover on the coloured squares(on PCs) Or tap them (on mobile devices) to get 1 point.
+      If a white square is tapped or hovered, the game is over. Press on <span class="name">dark red box</span> to
+      change your name. If the history size becomes too large, clear the cache and try again.</p>
   </div>
 
   <div class="menu">
     <h2>Credits</h2>
     <ul>
       <li><b>Development : </b> Sushnata Sarkar
-        <a class="fa fa-github" href="https://github.com/Sushnata1" target="_blank" >+ </a>
-        <a class="fa fa-facebook" href="https://www.facebook.com/sushnata.sarkar.9/" target="_blank" >+ </a>
-        <a class="fa fa-linkedin" href="https://www.linkedin.com/in/sushnata-sarkar-5a9752170/" target="_blank" >+ </a>
+        <a class="fa fa-github" href="https://github.com/Sushnata1" target="_blank">+ </a>
+        <a class="fa fa-facebook" href="https://www.facebook.com/sushnata.sarkar.9/" target="_blank">+ </a>
+        <a class="fa fa-linkedin" href="https://www.linkedin.com/in/sushnata-sarkar-5a9752170/" target="_blank">+ </a>
       </li>
       <li><b>Graphics : </b> Sayantanee Sarkar
-        <a class="fa fa-github" href="https://github.com/sayariya" target="_blank" >+ </a>
-        <a class="fa fa-facebook" href="https://www.facebook.com/profile.php?id=100007984517833" target="_blank" >+ </a>
-        <a class="fa fa-linkedin" href="https://www.linkedin.com/in/sayantanee-sarkar-474766227/" target="_blank" >+ </a>
+        <a class="fa fa-github" href="https://github.com/sayariya" target="_blank">+ </a>
+        <a class="fa fa-facebook" href="https://www.facebook.com/profile.php?id=100007984517833" target="_blank">+ </a>
+        <a class="fa fa-linkedin" href="https://www.linkedin.com/in/sayantanee-sarkar-474766227/" target="_blank">+ </a>
       </li>
     </ul>
   </div>
